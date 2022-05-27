@@ -41,14 +41,14 @@
                         </div>
                         <div class="col-md-6">
                             <div class="card">
-                                <div class="card-header">تقرير طلبات العملاء</div>
+                                <div class="card-header">تقرير سجل الطلبات </div>
 
                                 <div class="card-body">
                                     <table class="table table-striped table-bordered">
                                         <thead>
                                             <tr>
                                                 <th>اسم</th>
-                                                <th>العميل المعين</th>
+                                                <th>عدد العملاء</th>
 
 
                                             </tr>
@@ -87,7 +87,7 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h3 class="card-title " style="float: right; color:#E4C3AD">طلبات العملاء</h3>
+                                    <h3 class="card-title " style="float: right; color:#E4C3AD">سجل الطلبات</h3>
                                 </div>
                                 <!-- /.card-header -->
                                 <div class="card-body">

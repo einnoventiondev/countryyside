@@ -35,16 +35,18 @@
                                 <div class="card-header">
                                     <h3 class="card-title " style="float: right; color:#E4C3AD">قائمة أعضاء الفريق</h3>
                                     <a href="{{ route('team-add') }}" class="btn btn-success" style="float: left">اضافة
-                                        فريق</a>
+                                        مشرف</a>
                                 </div>
                                 <!-- /.card-header -->
                                 <div class="card-body">
                                     <table id="data-table" class="table table-striped table-bordered" style="width:100%">
                                         <thead>
                                             <tr>
-                                                <th>اسم</th>
-                                                <th>بريد الالكتروني</th>
-                                                <th>عمل</th>
+                                                <th>الاسم .. </th>
+                                                <th>البريد الإلكتروني</th>
+                                                <th>
+                                                    عمل خيارات
+                                                </th>
                                             </tr>
                                         </thead>
                                         <tbody>

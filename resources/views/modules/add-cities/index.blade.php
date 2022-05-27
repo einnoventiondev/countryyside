@@ -31,9 +31,10 @@
                                 {!! implode('', $errors->all('<div style="color: red; font-weight: bold;">:message</div>')) !!}
                             @endif
                             <div class="card">
-                                <div class="card-header">
-                                    <h3 class="card-title " style="float: right; color:#E4C3AD"> قائمة المدن </h3>
+                                <div class="card-header" style="display: flex; align-items:center !important;">
+                                    <h3 class="card-title mb-0 ml-3" style="float: right; color:#E4C3AD"> قائمة المدن </h3>
                                     <a href="{{ route('cities-add') }}" class="btn btn-success"> أضف مدينة</a>
+                                    <input class="search-filter form-control mr-auto" id="myInput" type="text" placeholder="بحث .." style="max-width:60%">
                                 </div>
                                 <!-- /.card-header -->
                                 <div class="card-body">
@@ -79,4 +80,5 @@
         </section>
         <!-- /.content -->
     </div>
+
 @endsection

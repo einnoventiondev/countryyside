@@ -156,7 +156,7 @@
                                 <a href="{{ route('team.index') }}" class="nav-link">
                                     <i class="nav-icon fas fa-user"></i>
                                     <p>
-                                        اضافة فريق
+                                        اضافة مشرف
                                     </p>
                                 </a>
                             </li>
@@ -245,6 +245,16 @@
             });
         });
     </script>
+        <script>
+            $(document).ready(function(){
+              $("#myInput").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#example1 tr").filter(function() {
+                  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+              });
+            });
+        </script>
 </body>
 
 </html>

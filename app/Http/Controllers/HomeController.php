@@ -263,7 +263,7 @@ class HomeController extends Controller
     }
     public function contactRequest(){
         $chart_options = [
-            'chart_title' => 'تذاكر في اليوم',
+            'chart_title' => 'تقارير الطلبات اليومية',
             'report_type' => 'group_by_date',
             'model' => 'App\Models\Contact',
             'group_by_field' => 'created_at',
