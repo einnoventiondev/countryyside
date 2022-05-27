@@ -37,7 +37,7 @@
                             <div class="small-box">
                                 <div class="inner" style="margin-right: 113px">
                                     <h3 style="color: #32525F"> {{ $count_progress_status }}</h3>
-                                    <p style="color: #32525F">في تقدم</p>
+                                    <p style="color: #32525F">تحت المعالجة</p>
                                 </div>
                             </div>
                         </div>
@@ -47,7 +47,7 @@
                             <div class="small-box bg-white">
                                 <div class="inner" style="margin-right: 113px">
                                     <h3 style="color: #32525F">{{ $count_teams }}</h3>
-                                    <p style="color: #32525F">عدد الفرق</p>
+                                    <p style="color: #32525F">المشرفين</p>
                                 </div>
                             </div>
                         </div>
@@ -58,7 +58,7 @@
                                 <div class="inner" style="margin-right: 113px">
                                     <h3 style="color: #32525F">{{ $count_completed_status }}</h3>
 
-                                    <p style="color: #32525F">مكتمل</p>
+                                    <p style="color: #32525F">مكتملة</p>
                                 </div>
                             </div>
                         </div>
@@ -81,7 +81,7 @@
                                                     <th>حالة العميل</th>
                                                     <th>تفاصيل</th>
                                                     <th>أجراءات</th>
-                                                    <th>تعيين الفريق</th>
+                                                    <th>تعيين مشرف</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -181,7 +181,7 @@
                             <div class="small-box bg-white">
                                 <div class="inner" style="margin-right: 113px">
                                     <h3 style="color: #32525F"> {{ $count_progress_status }}</h3>
-                                    <p style="color: #32525F">في تقدم</p>
+                                    <p style="color: #32525F">تحت المعالجة</p>
                                 </div>
                             </div>
                         </div>
@@ -583,7 +583,7 @@
                 },
                 success: function(data) {
                     alertify.set('notifier', 'position', 'top-right');
-                    alertify.success('تم تعيين الفريق بنجاح ')
+                    alertify.success('تم تعيين مشرف بنجاح ')
                 }
             });
 
