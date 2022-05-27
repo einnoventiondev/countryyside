@@ -609,8 +609,9 @@
                                                             <input type="radio" id="continent-noneed" name="flight_class"
                                                                 value="لا
     اريد">
-                                                            <label for="continent-noneed">لا
-                                                                اريد <img src="{{ asset('assets/img/noneed.png') }}"
+                                                            <label for="continent-noneed">
+                                                                ليس هناك حاجة
+                                                                <img src="{{ asset('assets/img/noneed.png') }}"
                                                                     alt=""></label>
                                                         </div>
                                                     </div>
