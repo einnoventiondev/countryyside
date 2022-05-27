@@ -1495,6 +1495,7 @@
      * ====================================================
      */
 
+    $('#example1_filter').hide()
 
     $(Selector.DROPDOWN_MENU + ' ' + Selector.DROPDOWN_TOGGLE).on("click", function (event) {
       event.preventDefault();

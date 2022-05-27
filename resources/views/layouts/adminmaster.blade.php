@@ -14,8 +14,7 @@
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Tempusdominus Bbootstrap 4 -->
-    <link rel="stylesheet"
-        href="{{ asset('assets/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">
     <!-- iCheck -->
     <link rel="stylesheet" href="{{ asset('assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
     <!-- JQVMap -->
@@ -35,7 +34,7 @@
     <link rel="stylesheet" href="{{ asset('assets/dist/css/custom.css') }}">
     <!-- DataTables -->
     <link rel="stylesheet" href="{{ asset('assets/plugins/datatables-bs4/css/dataTables.bootstrap4.css') }}">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.rtl.min.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.rtl.min.css" />
     <style>
         .sidebar a {
             color: #32525F !important;
@@ -71,7 +70,6 @@
             border: none !important;
             box-shadow: none !important;
         }
-
     </style>
 </head>
 
@@ -92,8 +90,7 @@
                     <a class="nav-link" data-toggle="dropdown" href="#">
                         <span>{{ Auth::user()->name }}</span>
 
-                        <img alt="image" style="height: 26px;" src="{{ asset('assets/img/login.png') }}"
-                            class="rounded-circle mr-1">
+                        <img alt="image" style="height: 26px;" src="{{ asset('assets/img/login.png') }}" class="rounded-circle mr-1">
                         <i class="fas fa-caret-down"></i>
                     </a>
                     <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
@@ -105,9 +102,9 @@
                             @csrf
                         </form>
                         @if (Auth::user()->role != 'admin')
-                            <div class="dropdown-divider"></div>
-                            <a href="{{ route('password-reset') }}" class="dropdown-item">إعادة تعيين كلمة
-                                المرور</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="{{ route('password-reset') }}" class="dropdown-item">إعادة تعيين كلمة
+                            المرور</a>
                         @endif
                     </div>
                 </li>
@@ -130,8 +127,7 @@
             <div class="sidebar">
                 <!-- Sidebar Menu -->
                 <nav class="mt-2">
-                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
-                        data-accordion="false">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                         <li class="nav-item">
@@ -164,7 +160,7 @@
                                 <a href="{{ route('contact-request') }}" class="nav-link">
                                     <i class="nav-icon fas fa-user"></i>
                                     <p>
-                                        تذاكر
+                                        التقارير
                                     </p>
                                 </a>
                             </li>
@@ -229,9 +225,9 @@
     <script src="{{ asset('assets/dist/js/demo.js') }}"></script>
     <script src="{{ asset('assets/plugins/datatables/jquery.dataTables.js') }}"></script>
     <script src="{{ asset('assets/plugins/datatables-bs4/js/dataTables.bootstrap4.js') }}"></script>
-    
-<!-- JavaScript -->
-<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
     <script>
         $(function() {
             $("#example1").DataTable();
