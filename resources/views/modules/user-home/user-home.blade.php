@@ -1294,10 +1294,12 @@
                     document.getElementById('euorpeCity').disabled = true;
                     document.getElementById('asiaCity').disabled = true;
                     document.getElementById('arabicCity').disabled = true;
+                    document.getElementById('worldCities').disabled = true;
                 } else {
                     document.getElementById('euorpeCity').disabled = false;
                     document.getElementById('asiaCity').disabled = false;
                     document.getElementById('arabicCity').disabled = false;
+                    document.getElementById('worldCities').disabled = false;
                 }
             }
         </script>
