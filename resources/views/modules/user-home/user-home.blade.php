@@ -507,7 +507,8 @@
                                                                         {{ $city->city }}</option>
                                                                 @endforeach
                                                             </select> --}}
-                                                            <select class="selectPicker" id="worldCities" onchange="myfunction()" class="form-select" name=""
+                                                            
+                                                            <select class="selectPicker select2 form-select" id="worldCities" onchange="myfunction()"  name=""
                                                             data-show-subtext="true" data-live-search="true">
                                                                 <option selected="" disabled="">select World city</option>
                                                                 <option value="">آروبا</option>

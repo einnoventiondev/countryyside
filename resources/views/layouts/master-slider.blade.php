@@ -11,9 +11,8 @@
     <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.5.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-date-range-picker/0.14.2/daterangepicker.min.css">
-
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <!-- jQuery and JS bundle w/ Popper.js -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
@@ -261,6 +260,7 @@ var a = document.getElementById("flight-bussiness").checked;
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="https://cdn.rtlcss.com/bootstrap/v4.5.3/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.16.0/moment.min.js"></script>
+<script src="{{asset('assets/js/formValidation.js')}}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-date-range-picker/0.14.2/jquery.daterangepicker.min.js"></script>
 <script>
     $(document).ready(function() {
@@ -276,13 +276,11 @@ var a = document.getElementById("flight-bussiness").checked;
                 $(this).val('12-01-2017');
             }
         })
-            .bind('datepicker-change', (e, data) => {
-                $('#applicantDate').val(data.value);
-            })
-            
+        .bind('datepicker-change', (e, data) => {
+            $('#applicantDate').val(data.value);
+        })
+        $('.select2').select2();
 
     });
 </script>
-<script src="{{asset('assets/js/formValidation.js')}}"></script>
-
 </html>
