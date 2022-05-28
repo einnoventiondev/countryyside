@@ -15,7 +15,6 @@
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <!-- jQuery and JS bundle w/ Popper.js -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
 
 </head>
 
@@ -280,7 +279,6 @@ var a = document.getElementById("flight-bussiness").checked;
             $('#applicantDate').val(data.value);
         })
         $('.select2').select2();
-
     });
 </script>
 </html>
