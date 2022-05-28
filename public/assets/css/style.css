@@ -1548,6 +1548,8 @@ position: absolute;
     width: 330px;
     height: 172px;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 .mainTitle {
     /*width: 350px;*/
