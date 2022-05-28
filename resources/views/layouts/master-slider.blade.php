@@ -282,7 +282,10 @@ var a = document.getElementById("flight-bussiness").checked;
             .bind('datepicker-change', (e, data) => {
                 $('#applicantDate').val(data.value);
             })
+            
+
     });
 </script>
+<script src="{{asset('assets/js/formValidation.js')}}"></script>
 
 </html>
