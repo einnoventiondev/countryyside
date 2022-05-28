@@ -873,8 +873,7 @@
                                                         </div>
                                                         <div class="continentfield">
                                                             <input type="checkbox" id="continent-noneed" name="flight_class"
-                                                                value="لا
-    اريد">
+                                                                value="ليس هناك حاجة">
                                                             <label for="continent-noneed">
                                                                 ليس هناك حاجة
                                                                 <img src="{{ asset('assets/img/noneed.png') }}"
@@ -919,10 +918,8 @@
 
                                                         </div>
                                                         <div class="continentfield">
-                                                            <input type="radio" id="van-noneed" name="car_type" value="لا
-    اريد">
-                                                            <label for="van-noneed">لا
-                                                                اريد <img src="{{ asset('assets/img/noneed.png') }}"
+                                                            <input type="radio" id="van-noneed" name="car_type" value="ليس هناك حاجة">
+                                                            <label for="van-noneed">ليس هناك حاجة<img src="{{ asset('assets/img/noneed.png') }}"
                                                                     alt=""></label>
                                                         </div>
 
@@ -947,7 +944,7 @@
                                                         <div class="customer_records">
                                                             <div class="row">
                                                                 <div class="col-md-6">
-                                                                    <div class="form-group ">
+                                                                    <div class="form-group">
                                                                         <label for="completeName">الاسم</label><i
                                                                             class="fas fa-star"></i>
                                                                         <input type="text" class="form-control"
@@ -975,9 +972,10 @@
 
                                                         <div class="row">
                                                             <div class="col-md-6">
-                                                                <div class="form-group">
+                                                                <div class="form-group" style="position: relative;">
                                                                     <label for="mobNumber">رقم الجوال</label><i
                                                                         class="fas fa-star"></i>
+                                                                        <div class="country-code h-32">966+</div>
                                                                     <input style="direction: ltr;text-align: end;"
                                                                         type="number" pattern="/^-?\d+\.?\d*$/"
                                                                         onKeyPress="if(this.value.length==12) return false;"
@@ -1132,12 +1130,13 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <div class="form-group">
+                                                <div class="form-group" style="position: relative;">
                                                     <label for="userNumber">رقم الجوال</label><i
                                                         class="fas fa-star"></i>
+                                                    <div class="country-code">966+</div>
                                                     <input style="direction: ltr;text-align: end;" type="tel"
                                                         pattern="/^-?\d+\.?\d*$/"
-                                                        onKeyPress="if(this.value.length==12) return false;"
+                                                        onKeyPress="if(this.value.length==9) return false;"
                                                         class="form-control" id="userNumber" placeholder="+9665xxxxxxxx"
                                                         name="customer_number" required>
                                                 </div>

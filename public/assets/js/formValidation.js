@@ -1,17 +1,17 @@
 $(function() {
     var code = '+966';
     var add = true;
-    $('#userNumber').keypress(function(){
+    $('#userNumber').keypress(function(e){
         var number = String.fromCharCode(e.which) || e.key;
-        if(add) {
-            $(this).val(code + number);
-            add = false;
-        }
-        if($(this).val().length === 0) {
-            add = true;
-            $(this).val(code + number);
-            add = false;
-        }
+        // if(add) {
+        //     $(this).val(code + number);
+        //     add = false;
+        // }
+        // if($(this).val().length === 0) {
+        //     add = true;
+        //     $(this).val(code + number);
+        //     add = false;
+        // }
         var regExp = /[0-9\+]/;
         // Only numbers, + symbol
         if (!regExp.test(number)
