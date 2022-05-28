@@ -1298,6 +1298,10 @@ position: absolute;
     /*}*/
 }
 
+.select2 {
+    width: 90% !important;
+}
+
 @media screen and (max-width: 525px){
     .rightNormal .navbar-nav li {
     padding: 8px 10px !important;
