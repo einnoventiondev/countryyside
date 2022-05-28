@@ -1131,12 +1131,13 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <div class="form-group">
+                                                <div class="form-group" style="position: relative;">
                                                     <label for="userNumber">رقم الجوال</label><i
                                                         class="fas fa-star"></i>
+                                                    <div class="country-code">966+</div>
                                                     <input style="direction: ltr;text-align: end;" type="tel"
                                                         pattern="/^-?\d+\.?\d*$/"
-                                                        onKeyPress="if(this.value.length==12) return false;"
+                                                        onKeyPress="if(this.value.length==9) return false;"
                                                         class="form-control" id="userNumber" placeholder="+9665xxxxxxxx"
                                                         name="customer_number" required>
                                                 </div>
