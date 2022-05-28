@@ -870,7 +870,7 @@
                                                 <div class="form-group">
                                                     <label for="userNumber">رقم الجوال</label><i
                                                         class="fas fa-star"></i>
-                                                    <input style="direction: ltr;text-align: end;" type="number"
+                                                    <input style="direction: ltr;text-align: end;" type="tel"
                                                         pattern="/^-?\d+\.?\d*$/"
                                                         onKeyPress="if(this.value.length==12) return false;"
                                                         class="form-control" id="userNumber" placeholder="+9665xxxxxxxx"
