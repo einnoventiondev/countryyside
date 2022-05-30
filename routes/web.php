@@ -30,7 +30,7 @@ Route::get('team-assign', [HomeController::class, 'assignTeam'])->name('assign-t
 Route::post('record-del', [HomeController::class, 'deleteRecord'])->name('del-record');
 Route::get('add-cities', [HomeController::class, 'addCities'])->name('cities-add');
 Route::post('added-new-cities', [HomeController::class, 'addNewCities'])->name('new-cities-added');
-Route::post('file-upload', [HomeController::class, 'fileUploadPost'])->name('upload-file');
+Route::post('file-upload', [HomeController::class, 'upload-file'])->name('upload-file');
 Route::get('add-team', function () {
     return view('modules.add-team.add-team');
 })->name('team-add');

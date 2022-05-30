@@ -181,6 +181,7 @@ class HomeController extends Controller
 
     public function fileUploadPost(Request $request)
     {
+        return $request;
         $request->validate([
             'file' => 'required|mimes:pdf|max:2048',
         ]);

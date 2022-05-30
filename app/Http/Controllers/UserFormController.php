@@ -71,7 +71,7 @@ class UserFormController extends Controller
 
 
             $previous_travel = '';
-             $cutm_data->destination = $data['continent'];
+            $cutm_data->destination = $data['continent'];
             $europe = $req->previous_travel_europe;
             $asia = $req->previous_travel_asia;
             $arabia = $req->previous_travel_arabia;
@@ -101,9 +101,22 @@ class UserFormController extends Controller
             $guest_data->guest_contact = '+966'.$req->guest_contact;
             // $guest_data->travel_history = $req->travel_history;
             $guest_data->save();
-
-            Mail::to($req->email)->send(new SendPassword($generate_password));
-            // Mail::to('shahzadanouman@hotmail.com')->send(new SendPassword($generate_password));
+            
+            $data1 = [
+                "name" => $req->guest_name['0'],
+                "email" => $req->email,
+                "role" => 'customer',
+                "age" => $req->guest_age['0'],
+                "Contact" => '+966'.$req->guest_contact,
+                "team" => 'Assign Team',
+                "status" =>'In-progress',
+                "destination" => $data['continent'],
+                "customer_id" => $get_id,
+                "generate_password" => $generate_password
+            ];
+            //return $data1;
+            //Mail::to($req->email)->send(new SendPassword($data1));
+            Mail::to('shahzadanouman@hotmail.com')->send(new SendPassword($data1));
         $europe=  DB::table('continents')->where('continent','Europe')->get();
         $asia=  DB::table('continents')->where('continent','Asia')->get();
         $arabia=  DB::table('continents')->where('continent','Arabia')->get();

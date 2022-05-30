@@ -10,15 +10,17 @@ use Illuminate\Queue\SerializesModels;
 class SendPassword extends Mailable
 {
     use Queueable, SerializesModels;
-    public $generate_password;
+    // public $generate_password;
+    public $data1 = [];  
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($generate_password)
+    public function __construct($data1)
     {
-        $this->generate_password = $generate_password;
+        return $data1;
+        (array)$this->$data1 = $data1;
     }
 
     /**
@@ -29,6 +31,6 @@ class SendPassword extends Mailable
     public function build()
     {
         return $this->subject('Mail from Vocation')
-        ->view('modules.password-mail-view.password-mail-view');
+        ->view('modules.password-mail-view.password-mail-view',compact('data1'));
     }
 }
