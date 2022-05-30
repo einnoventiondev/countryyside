@@ -28,7 +28,7 @@ class UserFormController extends Controller
         return view('modules.user-slider-form.user-slider-form', compact( 'europe','asia', 'arabia'));
     }
     public function UserForm(Request $req){
-
+        
         $rules = [
 
             'continent' => 'required|string',
@@ -64,7 +64,7 @@ class UserFormController extends Controller
 
             $cutm_data->user_id = $custm_login->id;
             $cutm_data->age = $req->guest_age['0'];
-            $cutm_data->custm_contact = $req->guest_contact;
+            $cutm_data->custm_contact = '+966'.$req->guest_contact;
 
             $cutm_data->team_assign = 'Assign Team';
             $cutm_data->custm_status = 'In-progress';
@@ -98,12 +98,12 @@ class UserFormController extends Controller
             $guest_data->custm_id = $get_id;
             $guest_data->guest_name = json_encode($req->guest_name);
             $guest_data->guest_age = json_encode($req->guest_age);
-            $guest_data->guest_contact = $req->guest_contact;
-           // $guest_data->travel_history = $req->travel_history;
+            $guest_data->guest_contact = '+966'.$req->guest_contact;
+            // $guest_data->travel_history = $req->travel_history;
             $guest_data->save();
 
             Mail::to($req->email)->send(new SendPassword($generate_password));
-
+            // Mail::to('shahzadanouman@hotmail.com')->send(new SendPassword($generate_password));
         $europe=  DB::table('continents')->where('continent','Europe')->get();
         $asia=  DB::table('continents')->where('continent','Asia')->get();
         $arabia=  DB::table('continents')->where('continent','Arabia')->get();
