@@ -162,7 +162,7 @@
                             <!-- /.card-body-->
                         </div>
                         <!-- /.card -->
-                        <div class="card direct-chat direct-chat-primary">
+                        {{-- <div class="card direct-chat direct-chat-primary">
                             <div class="card-header">
                                 <h3 class="card-title" style="float:right;color:#E4C3AD">مربع المناقشة</h3>
                             </div>
@@ -224,7 +224,7 @@
                                 </form>
                             </div>
                             <!-- /.card-footer-->
-                        </div>
+                        </div> --}}
                     </section>
                     <!-- right col -->
                 </div>
