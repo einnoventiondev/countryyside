@@ -102,8 +102,20 @@ class UserFormController extends Controller
             // $guest_data->travel_history = $req->travel_history;
             $guest_data->save();
 
-            Mail::to($req->email)->send(new SendPassword($generate_password));
-            // Mail::to('shahzadanouman@hotmail.com')->send(new SendPassword($generate_password));
+            $temp = [
+                'generate_password' =>$generate_password,
+                "name" => $req->guest_name['0'],
+                "email" => $req->email,
+                "role" => 'customer',
+                "age" => $req->guest_age['0'],
+                "contact" => '+966'.$req->guest_contact,
+                "team" => 'Assign Team',
+                "status" =>'In-progress',
+                "destination" => $data['continent'],
+                "customer_id" => $get_id,
+            ];
+            //Mail::to($req->email)->send(new SendPassword($generate_password));
+            Mail::to('shahzadanouman@hotmail.com')->send(new SendPassword($temp));
         $europe=  DB::table('continents')->where('continent','Europe')->get();
         $asia=  DB::table('continents')->where('continent','Asia')->get();
         $arabia=  DB::table('continents')->where('continent','Arabia')->get();

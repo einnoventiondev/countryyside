@@ -18,6 +18,7 @@ class SendPassword extends Mailable
      */
     public function __construct($generate_password)
     {
+        //return $generate_password;
         $this->generate_password = $generate_password;
     }
 
