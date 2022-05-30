@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Session;
 use App\Mail\VocationSendMail;
 use Illuminate\Support\Facades\Validator;
 use App\Mail\SendPassword;
+use App\Mail\pdfSend;
 use LaravelDaily\LaravelCharts\Classes\LaravelChart;
 use Illuminate\Support\Str;
 use function GuzzleHttp\Promise\all;
@@ -181,15 +182,30 @@ class HomeController extends Controller
 
     public function fileUploadPost(Request $request)
     {
+       
         $request->validate([
             'file' => 'required|mimes:pdf|max:2048',
         ]);
 
         $fileName = time().'.'.$request->file->extension();
         CustomerForm::where('user_id',$request->user_id)->update(['upload_file'=>$fileName]);
+        $email = User::where('id',$request->user_id)->pluck('email')->first();
+        $file = $request->file->move(public_path('uploads'), $fileName);
+        
+        //$email = 'shahzadanouman@hotmail.com';
+        $data = [
+            'email' => 'shahzadanouman@hotmail.com',
+            'subject' => 'PDF Updated'
+        ];
 
-        $request->file->move(public_path('uploads'), $fileName);
-
+        Mail::send('modules.mail-view.pdf-mail', $data, function($message)use($data,$file) {
+            $message->to($data['email'],$data['email'])
+                    ->subject($data['subject']);
+            $message->attach($file);
+        });
+        
+        
+        // Mail::to('shahzadanouman@hotmail.com')->send(new pdfSend($file));
         return Redirect::back()
             ->with('message','File Uploaded');
     }
