@@ -1,17 +1,6 @@
 $(function() {
-    var code = '+966';
-    var add = true;
     $('#userNumber').keypress(function(e){
         var number = String.fromCharCode(e.which) || e.key;
-        // if(add) {
-        //     $(this).val(code + number);
-        //     add = false;
-        // }
-        // if($(this).val().length === 0) {
-        //     add = true;
-        //     $(this).val(code + number);
-        //     add = false;
-        // }
         var regExp = /[0-9\+]/;
         // Only numbers, + symbol
         if (!regExp.test(number)
@@ -23,6 +12,75 @@ $(function() {
             || e.which > 40)) {
             e.preventDefault();
             return false;
+        }
+    })
+
+    $('#nextBtn').click(function() {
+        $(this).addClass('disabled');
+    })
+
+    $('.continentForm.sajalContinentForm select').change(function() {
+        $('#nextBtn').removeClass('disabled');
+    })
+
+    $('.continentfield #first-travel').change(function() {
+        $('#nextBtn').toggleClass('disabled');
+    })
+
+    $('.continentForm .preferedfield input[type="radio"]').change(function() {
+        $('#nextBtn').removeClass('disabled');
+    })
+
+    $('#booking-class input[type="checkbox"]').change(function() {
+        $(this).toggleClass('active');
+        if($('#booking-class').find('input[type="checkbox"]').hasClass('active')) {
+            $('#nextBtn').removeClass('disabled');
+        }
+        else {
+            $('#nextBtn').addClass('disabled');
+        }
+    })
+
+    $('#car-form .continentfield input[type="radio"]').change(function() {
+        $('#nextBtn').removeClass('disabled');
+    })
+
+    // var name = $('#completeName').val();
+    // var age = $('#age').val();
+    // var mobile = $('#mobNumber').val();
+    // var email = $('#completeEmail').val();
+
+    // Form Validation
+    $('#completeName').keyup(function() {
+        if($(this).val().length > 0 && $('#age').val().length > 0 && $('#mobNumber').val().length > 0 && $('#completeEmail').val().length > 0) {
+            $('#submit').removeClass('disabled');
+        }
+        else {
+            $('#submit').addClass('disabled');
+        }
+    })
+    $('#age').keyup(function() {
+        if($(this).val().length > 0 && $('#completeName').val().length > 0 && $('#mobNumber').val().length > 0 && $('#completeEmail').val().length > 0) {
+            $('#submit').removeClass('disabled');
+        }
+        else {
+            $('#submit').addClass('disabled');
+        }
+    })
+    $('#mobNumber').keyup(function() {
+        if($(this).val().length > 0 && $('#completeName').val().length > 0 && $('#age').val().length > 0 && $('#completeEmail').val().length > 0) {
+            $('#submit').removeClass('disabled');
+        }
+        else {
+            $('#submit').addClass('disabled');
+        }
+    })
+    $('#completeEmail').keyup(function() {
+        if($(this).val().length > 0 && $('#completeName').val().length > 0 && $('#age').val().length > 0 && $('#mobNumber').val().length > 0) {
+            $('#submit').removeClass('disabled');
+        }
+        else {
+            $('#submit').addClass('disabled');
         }
     })
 })

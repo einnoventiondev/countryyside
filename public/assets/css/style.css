@@ -2092,6 +2092,9 @@ a:hover {
 .select2-container--default .select2-selection--single .select2-selection__arrow b {
     top: 60% !important;
 }
+.disabled {
+    pointer-events: none;
+}
 
 /* @media(max-width:1400px){
     .select2-container--default .select2-selection--single{

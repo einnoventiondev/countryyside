@@ -848,7 +848,7 @@
                                                 </div>
                                                 <div class="allErrors" id="errorid4"></div>
                                                 <div class="continentForm">
-                                                    <div class="switch-field">
+                                                    <div class="switch-field" id="booking-class">
                                                         <div class="continentfield">
                                                             <input type="checkbox" id="flight-bussiness" name="flight_class"
                                                                 value="درجة
@@ -898,7 +898,7 @@
                                                     من مساعدته في اضافة حجز الطيران لحزمة الحجز الكاملة .</p>
                                                 </div>
                                                 <div class="allErrors" id="errorid5"></div>
-                                                <div class="continentForm">
+                                                <div class="continentForm" id="car-form">
                                                     <div class="switch-field">
                                                         <div class="continentfield">
                                                             <input type="radio" id="van-luxury" name="car_type"
@@ -1022,7 +1022,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="text-center mt-1"><button type="submit"><i
+                                                    <div class="text-center mt-1"><button class="disabled" type="submit" id="submit"><i
                                                                 class="fas fa-check"></i></button></div>
                                                 </div>
                                             </div>
@@ -1038,7 +1038,7 @@
                                                 style="position: absolute;left: -85px;top: 22px;color: #728C83;">السابق</span>
                                         </a>
 
-                                        <a class="carousel-control-next" href="#demo" data-slide="next">
+                                        <a class="carousel-control-next" id="nextBtn" href="#demo" data-slide="next">
                                             <span id="nextCarouselButton" class="nextPrev"
                                                 style="position: absolute;right: -85px;top: 22px;color: #728C83;">التالي</span>
                                             <span><button><i style="color:#728C83"
