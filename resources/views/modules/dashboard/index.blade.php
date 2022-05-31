@@ -21,12 +21,13 @@
             <section class="content">
                 <div class="container-fluid">
                     <!-- Small boxes (Stat box) -->
-                    <div class="row" style="color: #32525F">
+                    <div class="row dashboard-main-card" style="color: #32525F">
                         <div class="col-lg-3 col-6">
                             <!-- small box -->
                             <div class="small-box bg-white">
-                                <div class="inner" style="margin-right: 113px">
-                                    <h3 style="color: #32525F"> {{ $count }}</h3>
+                                <div class="inner">
+                                    {{-- <h3 style="color: #32525F"> {{ $count }} </h3> --}}
+                                    <h3 style="color: #32525F"> <i class="fas fa-chart-line"></i> </h3>
                                     <p style="color: #32525F">إجمالي الطلبات الواردة</p>
                                 </div>
                             </div>
@@ -35,8 +36,10 @@
                         <div class="col-lg-3 col-6 ">
                             <!-- small box -->
                             <div class="small-box">
-                                <div class="inner" style="margin-right: 113px">
-                                    <h3 style="color: #32525F"> {{ $count_progress_status }}</h3>
+                                <div class="inner">
+                                    {{-- <h3 style="color: #32525F"> {{ $count_progress_status }}</h3> --}}
+                                    <h3 style="color: #32525F"><i class="fas fa-hourglass-half"></i></h3>
+
                                     <p style="color: #32525F">تحت المعالجة</p>
                                 </div>
                             </div>
@@ -45,8 +48,9 @@
                         <div class="col-lg-3 col-6">
                             <!-- small box -->
                             <div class="small-box bg-white">
-                                <div class="inner" style="margin-right: 113px">
-                                    <h3 style="color: #32525F">{{ $count_teams }}</h3>
+                                <div class="inner">
+                                    {{-- <h3 style="color: #32525F">{{ $count_teams }}</h3> --}}
+                                    <h3 style="color: #32525F"><i class="fas fa-users"></i></h3>
                                     <p style="color: #32525F">المشرفين</p>
                                 </div>
                             </div>
@@ -55,8 +59,9 @@
                         <div class="col-lg-3 col-6">
                             <!-- small box -->
                             <div class="small-box bg-white">
-                                <div class="inner" style="margin-right: 113px">
-                                    <h3 style="color: #32525F">{{ $count_completed_status }}</h3>
+                                <div class="inner">
+                                    {{-- <h3 style="color: #32525F">{{ $count_completed_status }}</h3> --}}
+                                    <h3 style="color: #32525F"><i class="fas fa-clipboard-check"></i></h3>
 
                                     <p style="color: #32525F">مكتملة</p>
                                 </div>
@@ -73,7 +78,7 @@
                                     </div>
                                     <!-- /.card-header -->
                                     <div class="card-body">
-                                        <table id="example1" class="table table-bordered table-striped">
+                                        <table id="example1" class="table dashboard-index-table table-bordered table-striped">
                                             <thead>
                                                 <tr>
                                                     <th>اسم الزبون</th>

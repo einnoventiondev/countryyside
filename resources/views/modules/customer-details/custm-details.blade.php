@@ -29,7 +29,7 @@
                         <div class="card">
                             <div class="card-header d-flex p-0">
                                 <h3 class="card-title p-3" style="float:right;color:#E4C3AD">
-                                    تفاصيل العميل
+                                    تفاصيل العميل 
                                 </h3>
 
                             </div>
