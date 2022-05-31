@@ -120,3 +120,26 @@
             margin-right: 0;
         }
     }
+
+
+    /* //////////////////////////////////////////// custom styling /////////////////////////////////////////// */
+
+    @media (max-width: 1244px) {
+            #example1_wrapper{
+                overflow-x: auto !important;
+            }
+        }
+
+        .dashboard-main-card .small-box{
+            text-align: center;
+        }
+        .dataTables_filter{
+            text-align: left !important;
+        }
+        .dashboard-index-table select{
+            height: 39px;
+            width: 100%;
+        }
+        div.dataTables_wrapper div.dataTables_filter {
+            text-align: left;
+        }
