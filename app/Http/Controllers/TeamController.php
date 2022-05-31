@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\CustomerForm;
 use Illuminate\Http\Request;
 
 class TeamController extends Controller
@@ -72,10 +73,24 @@ class TeamController extends Controller
     public function update(Request $request)
     {
         $team=User::find($request->id);
+        $cust_details = CustomerForm::where('user_id',$request->id)->first();
+        if (is_null($cust_details))
+        {
+            $cust_details  = new CustomerForm;
+            $cust_details->user_id = $request->id;
+            $cust_details->save();  
+        }
         $team->update([
             'name'=>$request->member_name,
             'email' =>$request->email
         ]);
+        $cust_details->update([
+            'age' => $request->age,
+            'custm_contact' => $request->contact
+        ]);
+
+
+
         return redirect()->route('team.index')->with('message', 'تم تحديث الفريق بنجاح');
     }
 
@@ -88,6 +103,7 @@ class TeamController extends Controller
     public function destroy($id)
     {
         $team=User::find($id)->delete();
+        $client = CustomerForm::where('user_id',$id)->first()->delete();
         return redirect()->route('team.index')->with('message', 'تم حذف الفريق بنجاح');
     }
 }

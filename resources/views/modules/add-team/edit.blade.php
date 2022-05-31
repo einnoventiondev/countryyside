@@ -56,6 +56,29 @@
                                                         placeholder="أدخل البريد الإلكتروني للعضو" name="email" required>
                                                 </div>
                                             </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="age">العمر</label>
+                                                    <input type="number" class="form-control"
+                                                        placeholder="أدخل البريد الإلكتروني للعضو" name="age" value="{{ App\Models\CustomerForm::where('user_id',$team->id)->pluck('age')->first() }}" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group" style="position: relative;">
+                                                    <label for="mobNumber">رقم الجوال</label><i
+                                                        class="fas fa-star"></i>
+                                                        {{-- <div class="country-code h-32">966+</div> --}}
+                                                    <input style="direction: ltr;text-align: end;"
+                                                        type="text"{{--  pattern="/^-?\d+\.?\d*$/" --}}
+                                                        onKeyPress="if(this.value.length==12) return false;"
+                                                        class="form-control" id="mobNumber"
+                                                        placeholder="9665xxxxxxxx+" name="contact"
+                                                        value="{{ App\Models\CustomerForm::where('user_id',$team->id)->pluck('custm_contact')->first() }}"
+                                                        required>
+                                                </div>
+                                            </div>
+
+
                                         </div>
                                         <button class="btn btn-outline-white" type="submit"
                                             style="background: #E4C3AD; color: white;">إضافة عضو</button>

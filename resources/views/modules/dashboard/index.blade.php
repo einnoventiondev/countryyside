@@ -87,8 +87,8 @@
                                             <tbody>
                                                 @foreach ($custm_data as $data)
                                                     <tr>
-                                                        <td>{{ $data->user->name }}</td>
-                                                        <td>{{ $data->user->email }}</td>
+                                                        <td>{{ $data->user->name ?? ''}}</td>
+                                                        <td>{{ $data->user->email ?? ''}}</td>
                                                         <td>
                                                             <select class="status" id="stat{{ $data->id }}"
                                                                 name="status" onchange='getstatus({{ $data->id }})'>

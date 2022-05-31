@@ -30,6 +30,7 @@ class CreateCustomerFormsTable extends Migration
             $table->string('accomodation_facility')->nullable();
             $table->string('flight_class')->nullable();
             $table->string('car_type')->nullable();
+            $table->string('age')->nullable();
             $table->string('team_assign')->nullable();
             $table->integer('team_assign_id')->nullable();
             $table->string('custm_status')->nullable();

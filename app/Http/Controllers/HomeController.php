@@ -20,6 +20,7 @@ use App\Mail\VocationSendMail;
 use Illuminate\Support\Facades\Validator;
 use App\Mail\SendPassword;
 use App\Mail\pdfSend;
+use App\Mail\teamSend;
 use LaravelDaily\LaravelCharts\Classes\LaravelChart;
 use Illuminate\Support\Str;
 use function GuzzleHttp\Promise\all;
@@ -190,11 +191,10 @@ class HomeController extends Controller
         $fileName = time().'.'.$request->file->extension();
         CustomerForm::where('user_id',$request->user_id)->update(['upload_file'=>$fileName]);
         $email = User::where('id',$request->user_id)->pluck('email')->first();
-        $file = $request->file->move(public_path('uploads'), $fileName);
-        
-        //$email = 'shahzadanouman@hotmail.com';
+        $file = $request->file->move(public_path('uploads'), $fileName);     
+
         $data = [
-            'email' => 'shahzadanouman@hotmail.com',
+            'email' => $email,
             'subject' => 'PDF Updated'
         ];
 
@@ -205,7 +205,7 @@ class HomeController extends Controller
         });
         
         
-        // Mail::to('shahzadanouman@hotmail.com')->send(new pdfSend($file));
+        // Mail::to($email)->send(new pdfSend($file));
         return Redirect::back()
             ->with('message','File Uploaded');
     }
@@ -225,7 +225,8 @@ class HomeController extends Controller
 
             $team_member_name = $req->member_name;
             $team_member_email = $req->email;
-
+            $age = $req->age;
+            
             $generate_password = Str::random(8);
 
             $add = new User;
@@ -235,7 +236,33 @@ class HomeController extends Controller
             $add->role = 'team';
             $add->save();
 
-            Mail::to($team_member_email)->send(new SendPassword($generate_password));
+            $cutm_data = new CustomerForm;
+
+            $cutm_data->user_id = $add->id;
+            $cutm_data->age = $req->age;
+            // '+966'.
+            $cutm_data->custm_contact = $req->contact;
+
+            $cutm_data->team_assign = 'Assign Team';
+            $cutm_data->custm_status = 'In-progress';
+            $cutm_data->save();
+            $get_id = $cutm_data->id;
+            
+            $temp = [
+                'generate_password' =>$generate_password,
+                "name" => $team_member_name,
+                "email" => $team_member_email,
+                "role" => 'team',
+                "age" => $age,
+                //'+966'.
+                "contact" => $req->contact,
+                "team" => 'Assign Team',
+                "status" =>'In-progress',
+                "destination" => '',
+                "customer_id" => $get_id,
+            ];
+            
+            Mail::to($team_member_email)->send(new SendPassword($temp));
 
             return redirect()->route('team.index')->with('message', 'أضيف بنجاح');
         }
