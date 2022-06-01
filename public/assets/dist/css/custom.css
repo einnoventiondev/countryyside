@@ -140,6 +140,9 @@
             overflow-x: auto;
         }
     }
+    .dataTables_filter{
+        text-align: left !important;
+    }
     @media (max-width: 767px) {
         table {
             display: block;
@@ -178,9 +181,6 @@
 
         .dashboard-main-card .small-box{
             text-align: center;
-        }
-        .dataTables_filter{
-            text-align: left !important;
         }
         .dashboard-index-table select{
             height: 39px;
