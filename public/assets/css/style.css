@@ -939,6 +939,12 @@ a:hover {
 }
 
 /*=============== media quries============= */
+@media screen and (max-width: 1700px) {
+    .sidebar .veticalline {
+        position: relative;
+        top: 75px;
+    }
+}
 @media screen and (max-width: 1410px) {
     .carousel-inner {
         /*width:1100px;*/
@@ -993,6 +999,13 @@ a:hover {
 
     .sidebar {
         right: 20px
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .sidebar .veticalline {
+        position: relative;
+        top: 75px;
     }
 }
 
@@ -1168,7 +1181,18 @@ a:hover {
     }
 }
 
+@media screen and (max-width: 991px) {
+    .sidebar .veticalline {
+        top: 50px;
+        position: relative;
+    }
+}
+
 @media screen and (max-width: 992px) {
+    .sidebar .veticalline {
+        top: 50px;
+        position: relative;
+    }
     .rightNormal {
         width: unset;
         float: unset;
@@ -1399,7 +1423,12 @@ a:hover {
         width: 157px;
         float: right;
         margin: 14px 120px 0 0;
-        top: -236px;
+        top: -100px;
+    }
+
+    .sidebar .veticalline {
+        top: 190px!important;
+        position: relative;
     }
 
     .cottage {
@@ -1494,7 +1523,8 @@ a:hover {
 
     .vacationCarasol .carousel-caption {
         bottom: -368px;
-        left: 26% right:26%;
+        left: 26%;
+        right:26%;
     }
 
     /*.preferedfield {*/
