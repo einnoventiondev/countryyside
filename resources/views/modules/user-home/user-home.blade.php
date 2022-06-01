@@ -155,7 +155,7 @@
                         <!--    <img src="{{ asset('assets/img/hutCircle.png') }}" alt="">-->
                         <!--</div>-->
                         <div class="title-animation mainTitle">
-                            <h1>عنوان رئيسي</h1>
+                            <h1>أكواخ الريف</h1>
                             <p>يتشرف فريق اكواخ الريف من تقديم يد العون في مساعدتك لترتيب رحلتك بسهوله 
                             يسر وتقديم مقترحات مناسبة لكل عميل من خلال مجموعه من الخبراء في السفر يقدمون عصاره 
                             خبراتهم حتى تكون تجربتك ناجحه باذن الله .
@@ -498,7 +498,7 @@
                                                         </div>
                                                         <div class="continentfield sajalContinentfield">
                                                             <label class="forInputs" for="worldCities">
-                                                                select World city
+                                                                اختر مدينة أخرى 
                                                             </label>
                                                             {{-- <select class="selectPicker" onchange="myfunction()"
                                                                 id="arabicCity" name="previous_travel_arabia"
@@ -512,7 +512,7 @@
                                                             
                                                             <select class="selectPicker select2 form-select" id="worldCities" onchange="myfunction()"  name=""
                                                             data-show-subtext="true" data-live-search="true">
-                                                                <option selected="" disabled="">select World city</option>
+                                                                <option selected="" disabled="">اختر مدينة أخرى</option>
                                                                 <option value="">آروبا</option>
                                                                 <option value="AZ">أذربيجان</option>
                                                                 <option value="AM">أرمينيا</option>

@@ -1378,6 +1378,10 @@ a:hover {
     }
 }
 
+.select2 {
+    width: 90% !important;
+}
+
 @media screen and (max-width: 767px) {
     .select2 {
         width: 100% !important;
@@ -1473,7 +1477,7 @@ a:hover {
 
     .addmoreNameHeightLast {
         max-height: 370px;
-        overflow: initial;
+        /* overflow: initial; */
     }
 
     .rightNormal .navbar-nav li {
@@ -1546,7 +1550,7 @@ a:hover {
     /*    width: 100px;*/
     /*}*/
     .continentForm {
-        top: 112px;
+        top: 115px;
     }
 
     .carousel-inner {
@@ -1573,10 +1577,6 @@ a:hover {
     /*    font-size: 12px;*/
     /*    padding: 12px 5px;*/
     /*}*/
-}
-
-.select2 {
-    width: 90% !important;
 }
 
 @media screen and (max-width: 525px) {
