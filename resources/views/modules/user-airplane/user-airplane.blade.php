@@ -117,7 +117,7 @@
             <div class="clear"></div>
         </div>
         <div class="footer">
-                <p class="copyright" style="bottom:0">2021 &copy; جميع الحقوق محفوظة</p>
+                <p class="copyright" style="bottom:0">2022 &copy; جميع الحقوق محفوظة</p>
             </div>
     </div>
 @endsection

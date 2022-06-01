@@ -175,7 +175,7 @@
         @yield('content')
         <div class="justify-content-center ">
             <footer class="main-footer footer" style="color: #32525F; text-align:center ">
-                2021جميع الحقوق محفوظة @
+            جميع الحقوق محفوظة &copy; 2022
             </footer>
         </div>
         <!-- Control Sidebar -->

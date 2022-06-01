@@ -41,10 +41,10 @@
                         </div>
                         <div class="col-md-6">
                             <div class="card">
-                                <div class="card-header">تقرير سجل الطلبات </div>
+                                <div class="card-header"></div>
 
                                 <div class="card-body">
-                                    <table class="table table-striped table-bordered">
+                                    <table class="table table-striped table-bordered" id="team-table">
                                         <thead>
                                             <tr>
                                                 <th>اسم</th>

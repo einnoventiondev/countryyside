@@ -940,19 +940,25 @@ a:hover {
 
 /*=============== media quries============= */
 @media screen and (max-width: 1920px) {
-    .wrapperForm .pageNumber, .aboutSidebar .pageNumber {
+
+    .wrapperForm .pageNumber,
+    .aboutSidebar .pageNumber {
         margin-bottom: 40px;
     }
 }
+
 @media screen and (max-width: 1700px) {
     .sidebar .veticalline {
         position: relative;
         top: 75px;
     }
-    .wrapperForm .pageNumber, .aboutSidebar .pageNumber {
+
+    .wrapperForm .pageNumber,
+    .aboutSidebar .pageNumber {
         margin-bottom: -40px;
     }
 }
+
 @media screen and (max-width: 1410px) {
     .carousel-inner {
         /*width:1100px;*/
@@ -968,9 +974,11 @@ a:hover {
     .circleBottom button {
         margin-top: 5px;
     }
+
     .getStarted {
         height: 125px;
     }
+
     .circleBottom {
         bottom: 40px;
     }
@@ -1015,7 +1023,9 @@ a:hover {
         position: relative;
         top: 75px;
     }
-    .wrapperForm .pageNumber, .aboutSidebar .pageNumber {
+
+    .wrapperForm .pageNumber,
+    .aboutSidebar .pageNumber {
         margin-bottom: -20px;
     }
 }
@@ -1201,7 +1211,9 @@ a:hover {
         top: 50px;
         position: relative;
     }
-    .wrapperForm .pageNumber, .aboutSidebar .pageNumber {
+
+    .wrapperForm .pageNumber,
+    .aboutSidebar .pageNumber {
         margin-bottom: 0;
     }
 }
@@ -1211,7 +1223,7 @@ a:hover {
         top: 50px;
         position: relative;
     }
-    
+
     .rightNormal {
         width: unset;
         float: unset;
@@ -1383,21 +1395,27 @@ a:hover {
 }
 
 @media screen and (max-width: 767px) {
+    
     .select2 {
         width: 100% !important;
     }
+
     #submit {
         margin-top: 70px;
     }
+
     .carasolButtons {
         bottom: -75px;
     }
+
     /* .wrapper {
         height: 100%;
     } */
-    .wrapperForm .pageNumber, .aboutSidebar .pageNumber {
+    .wrapperForm .pageNumber,
+    .aboutSidebar .pageNumber {
         margin-bottom: -130px;
     }
+
     .navShow {
         flex-direction: row;
     }
@@ -1465,7 +1483,7 @@ a:hover {
     }
 
     .sidebar .veticalline {
-        top: 190px!important;
+        top: 190px !important;
         position: relative;
     }
 
@@ -1563,7 +1581,7 @@ a:hover {
     .vacationCarasol .carousel-caption {
         bottom: -368px;
         left: 26%;
-        right:26%;
+        right: 26%;
     }
 
     /*.preferedfield {*/
@@ -2157,6 +2175,7 @@ a:hover {
 .select2-container--default .select2-selection--single .select2-selection__arrow b {
     top: 60% !important;
 }
+
 .disabled {
     pointer-events: none;
 }
@@ -2187,4 +2206,3 @@ a:hover {
         width: 325px !important;
     }
 } */
-
