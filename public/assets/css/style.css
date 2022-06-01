@@ -939,10 +939,18 @@ a:hover {
 }
 
 /*=============== media quries============= */
+@media screen and (max-width: 1920px) {
+    .wrapperForm .pageNumber, .aboutSidebar .pageNumber {
+        margin-bottom: 40px;
+    }
+}
 @media screen and (max-width: 1700px) {
     .sidebar .veticalline {
         position: relative;
         top: 75px;
+    }
+    .wrapperForm .pageNumber, .aboutSidebar .pageNumber {
+        margin-bottom: -40px;
     }
 }
 @media screen and (max-width: 1410px) {
@@ -1006,6 +1014,9 @@ a:hover {
     .sidebar .veticalline {
         position: relative;
         top: 75px;
+    }
+    .wrapperForm .pageNumber, .aboutSidebar .pageNumber {
+        margin-bottom: -20px;
     }
 }
 
@@ -1103,7 +1114,7 @@ a:hover {
     .continentfield img {
         position: absolute;
         top: -34px;
-        left: -13px;
+        left: -18px;
         height: 150px;
     }
 
@@ -1140,6 +1151,10 @@ a:hover {
         font-size: 12px;
         padding: 20px 5px;
     }
+
+    /* .continentForm .continentfield label {
+        padding: 20px 5px;
+    } */
 
     .vacationCarasol .carousel-caption {
         position: absolute;
@@ -1186,6 +1201,9 @@ a:hover {
         top: 50px;
         position: relative;
     }
+    .wrapperForm .pageNumber, .aboutSidebar .pageNumber {
+        margin-bottom: 0;
+    }
 }
 
 @media screen and (max-width: 992px) {
@@ -1193,6 +1211,7 @@ a:hover {
         top: 50px;
         position: relative;
     }
+    
     .rightNormal {
         width: unset;
         float: unset;
@@ -1360,6 +1379,21 @@ a:hover {
 }
 
 @media screen and (max-width: 767px) {
+    .select2 {
+        width: 100% !important;
+    }
+    #submit {
+        margin-top: 70px;
+    }
+    .carasolButtons {
+        bottom: -75px;
+    }
+    /* .wrapper {
+        height: 100%;
+    } */
+    .wrapperForm .pageNumber, .aboutSidebar .pageNumber {
+        margin-bottom: -130px;
+    }
     .navShow {
         flex-direction: row;
     }
@@ -1401,7 +1435,7 @@ a:hover {
 
     .aboutRightNormal .mainTitle {
         padding-top: 37px;
-        padding-left: 30px;
+        padding-left: 15px;
     }
 
     .sidebar {
@@ -1439,6 +1473,7 @@ a:hover {
 
     .addmoreNameHeightLast {
         max-height: 370px;
+        overflow: initial;
     }
 
     .rightNormal .navbar-nav li {
@@ -1563,7 +1598,7 @@ a:hover {
 
     .preferedfield label,
     .continentfield label {
-        font-size: 11px;
+        font-size: 9px;
     }
 
     .sajalSwitchField {
@@ -1627,7 +1662,7 @@ a:hover {
     }
 
     .vacationCarasol .carousel-caption {
-        bottom: -450px;
+        bottom: -560px;
         left: 17%;
         right: 17%;
     }

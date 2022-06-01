@@ -1276,7 +1276,7 @@
                 </div>
             </div>
             <div class="footer">
-                <p class="copyright" style="bottom:0">جميع الحقوق محفوظة @ 2021</p>
+                <p class="copyright" style="bottom:0">2021 &copy; جميع الحقوق محفوظة</p>
             </div>
         </div>
         <script>

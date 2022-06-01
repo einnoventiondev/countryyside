@@ -463,7 +463,7 @@
             <div class="clear"></div>
             
             <div class="footer">
-                <p class="copyright">جميع الحقوق محفوظة @ 2021</p>
+                <p class="copyright">2021 &copy; جميع الحقوق محفوظة</p>
             </div>
         </div>
     </div>
